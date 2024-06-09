@@ -10,6 +10,7 @@
         <EntityTypeShape EntityType="DbSinavOgrenciModel.TBLOGRENCI" Width="1.5" PointX="2.75" PointY="4.25" IsExpanded="true" />
         <AssociationConnector Association="DbSinavOgrenciModel.FK_TBLNOTLAR_TBLDERSLER" ManuallyRouted="false" />
         <AssociationConnector Association="DbSinavOgrenciModel.FK_TBLNOTLAR_TBLOGRENCI" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DbSinavOgrenciModel.TBLKULUPLER" Width="1.5" PointX="5.375" PointY="5.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

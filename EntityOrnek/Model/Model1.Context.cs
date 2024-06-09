@@ -12,6 +12,8 @@ namespace EntityOrnek.Model
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class DbSinavOgrenciEntities : DbContext
     {
@@ -28,5 +30,11 @@ namespace EntityOrnek.Model
         public virtual DbSet<TBLDERSLER> TBLDERSLER { get; set; }
         public virtual DbSet<TBLNOTLAR> TBLNOTLAR { get; set; }
         public virtual DbSet<TBLOGRENCI> TBLOGRENCI { get; set; }
+        public virtual DbSet<TBLKULUPLER> TBLKULUPLER { get; set; }
+    
+        public virtual ObjectResult<NOTLISTESI_Result> NOTLISTESI()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<NOTLISTESI_Result>("NOTLISTESI");
+        }
     }
 }
