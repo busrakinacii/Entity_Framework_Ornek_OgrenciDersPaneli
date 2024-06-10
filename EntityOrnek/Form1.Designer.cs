@@ -49,7 +49,7 @@
             this.TxtDersID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.BtnSinavNotGuncelle = new System.Windows.Forms.Button();
+            this.BtnJoin = new System.Windows.Forms.Button();
             this.BtnHesapla = new System.Windows.Forms.Button();
             this.TxtDurum = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -77,6 +77,8 @@
             this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.radioButton11 = new System.Windows.Forms.RadioButton();
             this.radioButton12 = new System.Windows.Forms.RadioButton();
+            this.radioButton13 = new System.Windows.Forms.RadioButton();
+            this.radioButton14 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -161,7 +163,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.Location = new System.Drawing.Point(178, 209);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(236, 151);
+            this.groupBox1.Size = new System.Drawing.Size(236, 161);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ÖĞRENCİ";
@@ -169,7 +171,7 @@
             // TxtFoto
             // 
             this.TxtFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TxtFoto.Location = new System.Drawing.Point(100, 110);
+            this.TxtFoto.Location = new System.Drawing.Point(100, 121);
             this.TxtFoto.Name = "TxtFoto";
             this.TxtFoto.Size = new System.Drawing.Size(129, 26);
             this.TxtFoto.TabIndex = 21;
@@ -178,7 +180,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(5, 116);
+            this.label4.Location = new System.Drawing.Point(5, 127);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label4.Size = new System.Drawing.Size(93, 16);
@@ -188,7 +190,7 @@
             // TxtOgrSoyad
             // 
             this.TxtOgrSoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TxtOgrSoyad.Location = new System.Drawing.Point(100, 78);
+            this.TxtOgrSoyad.Location = new System.Drawing.Point(100, 89);
             this.TxtOgrSoyad.Name = "TxtOgrSoyad";
             this.TxtOgrSoyad.Size = new System.Drawing.Size(129, 26);
             this.TxtOgrSoyad.TabIndex = 19;
@@ -197,7 +199,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(35, 84);
+            this.label3.Location = new System.Drawing.Point(35, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 16);
             this.label3.TabIndex = 18;
@@ -206,7 +208,7 @@
             // TxtOgrAd
             // 
             this.TxtOgrAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TxtOgrAd.Location = new System.Drawing.Point(100, 43);
+            this.TxtOgrAd.Location = new System.Drawing.Point(100, 54);
             this.TxtOgrAd.Name = "TxtOgrAd";
             this.TxtOgrAd.Size = new System.Drawing.Size(129, 26);
             this.TxtOgrAd.TabIndex = 17;
@@ -216,7 +218,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(66, 53);
+            this.label2.Location = new System.Drawing.Point(66, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 16);
             this.label2.TabIndex = 16;
@@ -226,7 +228,7 @@
             // 
             this.TxtOgrID.Enabled = false;
             this.TxtOgrID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TxtOgrID.Location = new System.Drawing.Point(101, 11);
+            this.TxtOgrID.Location = new System.Drawing.Point(101, 22);
             this.TxtOgrID.Name = "TxtOgrID";
             this.TxtOgrID.Size = new System.Drawing.Size(129, 26);
             this.TxtOgrID.TabIndex = 15;
@@ -235,7 +237,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(72, 21);
+            this.label1.Location = new System.Drawing.Point(72, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 16);
             this.label1.TabIndex = 14;
@@ -248,9 +250,9 @@
             this.groupBox2.Controls.Add(this.TxtDersID);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox2.Location = new System.Drawing.Point(178, 376);
+            this.groupBox2.Location = new System.Drawing.Point(178, 387);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(236, 86);
+            this.groupBox2.Size = new System.Drawing.Size(236, 100);
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "DERSLER";
@@ -258,7 +260,7 @@
             // TxtDersAd
             // 
             this.TxtDersAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TxtDersAd.Location = new System.Drawing.Point(100, 43);
+            this.TxtDersAd.Location = new System.Drawing.Point(100, 54);
             this.TxtDersAd.Name = "TxtDersAd";
             this.TxtDersAd.Size = new System.Drawing.Size(129, 26);
             this.TxtDersAd.TabIndex = 17;
@@ -267,7 +269,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(62, 53);
+            this.label7.Location = new System.Drawing.Point(62, 64);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(32, 16);
             this.label7.TabIndex = 16;
@@ -276,7 +278,7 @@
             // TxtDersID
             // 
             this.TxtDersID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TxtDersID.Location = new System.Drawing.Point(100, 11);
+            this.TxtDersID.Location = new System.Drawing.Point(100, 22);
             this.TxtDersID.Name = "TxtDersID";
             this.TxtDersID.Size = new System.Drawing.Size(129, 26);
             this.TxtDersID.TabIndex = 15;
@@ -285,7 +287,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(68, 21);
+            this.label8.Location = new System.Drawing.Point(68, 32);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(26, 16);
             this.label8.TabIndex = 14;
@@ -293,7 +295,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.BtnSinavNotGuncelle);
+            this.groupBox3.Controls.Add(this.BtnJoin);
             this.groupBox3.Controls.Add(this.BtnHesapla);
             this.groupBox3.Controls.Add(this.TxtDurum);
             this.groupBox3.Controls.Add(this.label11);
@@ -308,25 +310,26 @@
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox3.Location = new System.Drawing.Point(430, 209);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(236, 253);
+            this.groupBox3.Size = new System.Drawing.Size(236, 293);
             this.groupBox3.TabIndex = 22;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "NOTLAR";
             // 
-            // BtnSinavNotGuncelle
+            // BtnJoin
             // 
-            this.BtnSinavNotGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnSinavNotGuncelle.Location = new System.Drawing.Point(29, 220);
-            this.BtnSinavNotGuncelle.Name = "BtnSinavNotGuncelle";
-            this.BtnSinavNotGuncelle.Size = new System.Drawing.Size(183, 33);
-            this.BtnSinavNotGuncelle.TabIndex = 26;
-            this.BtnSinavNotGuncelle.Text = "Sınav Notu Güncelle";
-            this.BtnSinavNotGuncelle.UseVisualStyleBackColor = true;
+            this.BtnJoin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnJoin.Location = new System.Drawing.Point(35, 245);
+            this.BtnJoin.Name = "BtnJoin";
+            this.BtnJoin.Size = new System.Drawing.Size(183, 33);
+            this.BtnJoin.TabIndex = 26;
+            this.BtnJoin.Text = "Join ile Getir";
+            this.BtnJoin.UseVisualStyleBackColor = true;
+            this.BtnJoin.Click += new System.EventHandler(this.BtnJoin_Click);
             // 
             // BtnHesapla
             // 
             this.BtnHesapla.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnHesapla.Location = new System.Drawing.Point(29, 181);
+            this.BtnHesapla.Location = new System.Drawing.Point(35, 200);
             this.BtnHesapla.Name = "BtnHesapla";
             this.BtnHesapla.Size = new System.Drawing.Size(183, 33);
             this.BtnHesapla.TabIndex = 25;
@@ -462,7 +465,7 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton1.Location = new System.Drawing.Point(686, 31);
+            this.radioButton1.Location = new System.Drawing.Point(686, 16);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(169, 19);
             this.radioButton1.TabIndex = 26;
@@ -474,7 +477,7 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton2.Location = new System.Drawing.Point(686, 67);
+            this.radioButton2.Location = new System.Drawing.Point(686, 50);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(169, 19);
             this.radioButton2.TabIndex = 27;
@@ -485,7 +488,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(695, 440);
+            this.button1.Location = new System.Drawing.Point(694, 473);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 33);
             this.button1.TabIndex = 27;
@@ -497,7 +500,7 @@
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton3.Location = new System.Drawing.Point(686, 107);
+            this.radioButton3.Location = new System.Drawing.Point(686, 84);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(87, 19);
             this.radioButton3.TabIndex = 28;
@@ -509,7 +512,7 @@
             // 
             this.radioButton4.AutoSize = true;
             this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton4.Location = new System.Drawing.Point(686, 151);
+            this.radioButton4.Location = new System.Drawing.Point(686, 118);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(166, 19);
             this.radioButton4.TabIndex = 29;
@@ -521,7 +524,7 @@
             // 
             this.radioButton5.AutoSize = true;
             this.radioButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton5.Location = new System.Drawing.Point(686, 185);
+            this.radioButton5.Location = new System.Drawing.Point(686, 152);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(156, 19);
             this.radioButton5.TabIndex = 30;
@@ -533,7 +536,7 @@
             // 
             this.radioButton6.AutoSize = true;
             this.radioButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton6.Location = new System.Drawing.Point(686, 220);
+            this.radioButton6.Location = new System.Drawing.Point(686, 186);
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(131, 19);
             this.radioButton6.TabIndex = 31;
@@ -545,7 +548,7 @@
             // 
             this.radioButton7.AutoSize = true;
             this.radioButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton7.Location = new System.Drawing.Point(685, 257);
+            this.radioButton7.Location = new System.Drawing.Point(685, 220);
             this.radioButton7.Name = "radioButton7";
             this.radioButton7.Size = new System.Drawing.Size(197, 16);
             this.radioButton7.TabIndex = 32;
@@ -557,7 +560,7 @@
             // 
             this.radioButton8.AutoSize = true;
             this.radioButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton8.Location = new System.Drawing.Point(686, 292);
+            this.radioButton8.Location = new System.Drawing.Point(686, 251);
             this.radioButton8.Name = "radioButton8";
             this.radioButton8.Size = new System.Drawing.Size(169, 19);
             this.radioButton8.TabIndex = 33;
@@ -569,7 +572,7 @@
             // 
             this.radioButton9.AutoSize = true;
             this.radioButton9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton9.Location = new System.Drawing.Point(686, 323);
+            this.radioButton9.Location = new System.Drawing.Point(686, 285);
             this.radioButton9.Name = "radioButton9";
             this.radioButton9.Size = new System.Drawing.Size(165, 19);
             this.radioButton9.TabIndex = 34;
@@ -581,7 +584,7 @@
             // 
             this.radioButton10.AutoSize = true;
             this.radioButton10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton10.Location = new System.Drawing.Point(686, 351);
+            this.radioButton10.Location = new System.Drawing.Point(686, 319);
             this.radioButton10.Name = "radioButton10";
             this.radioButton10.Size = new System.Drawing.Size(176, 19);
             this.radioButton10.TabIndex = 35;
@@ -593,7 +596,7 @@
             // 
             this.radioButton11.AutoSize = true;
             this.radioButton11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton11.Location = new System.Drawing.Point(686, 376);
+            this.radioButton11.Location = new System.Drawing.Point(686, 353);
             this.radioButton11.Name = "radioButton11";
             this.radioButton11.Size = new System.Drawing.Size(138, 19);
             this.radioButton11.TabIndex = 36;
@@ -605,7 +608,7 @@
             // 
             this.radioButton12.AutoSize = true;
             this.radioButton12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton12.Location = new System.Drawing.Point(686, 404);
+            this.radioButton12.Location = new System.Drawing.Point(686, 387);
             this.radioButton12.Name = "radioButton12";
             this.radioButton12.Size = new System.Drawing.Size(137, 19);
             this.radioButton12.TabIndex = 37;
@@ -613,12 +616,38 @@
             this.radioButton12.Text = "En Düşük Sınav 1";
             this.radioButton12.UseVisualStyleBackColor = true;
             // 
+            // radioButton13
+            // 
+            this.radioButton13.AutoSize = true;
+            this.radioButton13.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioButton13.Location = new System.Drawing.Point(686, 419);
+            this.radioButton13.Name = "radioButton13";
+            this.radioButton13.Size = new System.Drawing.Size(169, 16);
+            this.radioButton13.TabIndex = 38;
+            this.radioButton13.TabStop = true;
+            this.radioButton13.Text = "Sınav1 Ortalama Üstü Kişiler";
+            this.radioButton13.UseVisualStyleBackColor = true;
+            // 
+            // radioButton14
+            // 
+            this.radioButton14.AutoSize = true;
+            this.radioButton14.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radioButton14.Location = new System.Drawing.Point(686, 447);
+            this.radioButton14.Name = "radioButton14";
+            this.radioButton14.Size = new System.Drawing.Size(159, 16);
+            this.radioButton14.TabIndex = 39;
+            this.radioButton14.TabStop = true;
+            this.radioButton14.Text = "En Yüksek Sınav1 Kime Ait";
+            this.radioButton14.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumAquamarine;
             this.ClientSize = new System.Drawing.Size(880, 518);
+            this.Controls.Add(this.radioButton14);
+            this.Controls.Add(this.radioButton13);
             this.Controls.Add(this.radioButton12);
             this.Controls.Add(this.radioButton11);
             this.Controls.Add(this.radioButton10);
@@ -693,7 +722,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button BtnDersListesi;
         private System.Windows.Forms.Button BtnNotListesi;
-        private System.Windows.Forms.Button BtnSinavNotGuncelle;
+        private System.Windows.Forms.Button BtnJoin;
         private System.Windows.Forms.Button BtnHesapla;
         private System.Windows.Forms.Button BtnProsedur;
         private System.Windows.Forms.RadioButton radioButton1;
@@ -709,6 +738,8 @@
         private System.Windows.Forms.RadioButton radioButton10;
         private System.Windows.Forms.RadioButton radioButton11;
         private System.Windows.Forms.RadioButton radioButton12;
+        private System.Windows.Forms.RadioButton radioButton13;
+        private System.Windows.Forms.RadioButton radioButton14;
     }
 }
 

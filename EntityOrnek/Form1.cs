@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using EntityOrnek.Model;
+using System.ComponentModel.Design.Serialization;
 
 namespace EntityOrnek
 {
@@ -49,7 +50,7 @@ namespace EntityOrnek
         private void BtnNotListesi_Click(object sender, EventArgs e)
         {
             var query = from item in db.TBLNOTLAR
-                        select new { item.NOTID, item.OGR, item.DERS, item.SINAV1, item.SINAV2, item.SINAV3, item.ORTALAMA, item.DURUM };
+                        select new { item.NOTID, item.TBLOGRENCI.AD, item.TBLOGRENCI.SOYAD, item.TBLDERSLER.DERSAD, item.SINAV1, item.SINAV2, item.SINAV3, item.ORTALAMA, item.DURUM };
 
             dataGridView1.DataSource = query.ToList();
         }
@@ -139,11 +140,13 @@ namespace EntityOrnek
             }
             else if (radioButton5.Checked == true)
             {
+                //A harfi ile başlayanlar 
                 List<TBLOGRENCI> liste5 = db.TBLOGRENCI.Where(p => p.AD.StartsWith("A")).ToList();
                 dataGridView1.DataSource = liste5;
             }
             else if (radioButton6.Checked == true)
             {
+                //A harfi ile bitenler
                 List<TBLOGRENCI> liste6 = db.TBLOGRENCI.Where(p => p.AD.EndsWith("A")).ToList();
                 dataGridView1.DataSource = liste6;
             }
@@ -154,32 +157,66 @@ namespace EntityOrnek
                 MessageBox.Show(deger.ToString(), "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
-            else if(radioButton8.Checked == true)
+            else if (radioButton8.Checked == true)
             {
                 int toplam = db.TBLOGRENCI.Count();
                 MessageBox.Show(toplam.ToString(), "Toplam Öğrenci Sayısı", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if(radioButton9.Checked == true)
+            else if (radioButton9.Checked == true)
             {
                 var sinav1top = db.TBLNOTLAR.Sum(p => p.SINAV1);
-                MessageBox.Show("Öğrencilerin Toplam Sınav1 Puanları:"+sinav1top.ToString(), "Sınav 1 Toplamı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Öğrencilerin Toplam Sınav1 Puanları:" + sinav1top.ToString(), "Sınav 1 Toplamı", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if(radioButton10.Checked == true) 
+            else if (radioButton10.Checked == true)
             {
                 var sinav1ort = db.TBLNOTLAR.Average(p => p.SINAV1);
                 MessageBox.Show("Öğrencilerin Toplam Sınav1 Puan Ortalamaları:" + sinav1ort.ToString(), "Sınav 1 Ortalama", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            
-            else if(radioButton11.Checked == true)
+
+            else if (radioButton11.Checked == true)
             {
                 var maxsinav1 = db.TBLNOTLAR.Max(p => p.SINAV1);
                 MessageBox.Show("Sınav1 Max Puan" + maxsinav1.ToString(), "Sınav 1 Max Puan", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else
+            else if (radioButton12.Checked == true)
             {
                 var minsinav1 = db.TBLNOTLAR.Min(p => p.SINAV1);
                 MessageBox.Show("Sınav1 Min Puan" + minsinav1.ToString(), "Sınav 1 Min Puan", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else if (radioButton13.Checked == true)
+            {
+                var ort = db.TBLNOTLAR.Average(p => p.SINAV1);
+                List<TBLNOTLAR> list = db.TBLNOTLAR.Where(p => p.SINAV1 > ort).ToList();
+                dataGridView1.DataSource = list;
+
+            }
+            else
+            {
+                var max = db.TBLNOTLAR.Max(p => p.SINAV1);
+                dataGridView1.DataSource = db.NOTLISTESI().Where(p => p.SINAV1 == max).ToList();
+
+            }
+        }
+
+        private void BtnJoin_Click(object sender, EventArgs e)
+        {
+            var sorgu = from d1 in db.TBLNOTLAR
+                        join d2 in db.TBLOGRENCI
+                        on d1.OGR equals d2.ID
+                        join d3 in db.TBLDERSLER
+                        on d1.DERS equals d3.DERSID
+
+                        select new
+                        {
+                            ÖĞRENCİ = d2.AD + " " + d2.SOYAD,
+                            DERS_ADI=d3.DERSAD,
+                            SINAV1 = d1.SINAV1,
+                            SINAV2 = d1.SINAV2,
+                            SINAV3 = d1.SINAV3,
+                            ORTALAMA = d1.ORTALAMA,
+                            DURUM = d1.DURUM
+                        };
+            dataGridView1.DataSource = sorgu.ToList();
         }
     }
 }
