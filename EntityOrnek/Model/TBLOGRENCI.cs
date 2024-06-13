@@ -24,6 +24,8 @@ namespace EntityOrnek.Model
         public string AD { get; set; }
         public string SOYAD { get; set; }
         public string FOTOGRAF { get; set; }
+        public Nullable<short> OGRKULUP { get; set; }
+        public string SEHIR { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TBLNOTLAR> TBLNOTLAR { get; set; }
