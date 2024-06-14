@@ -43,6 +43,16 @@
           <Property Name="OGRKULUP" Type="smallint" />
           <Property Name="SEHIR" Type="varchar" MaxLength="20" />
         </EntityType>
+        <EntityType Name="TBLURUN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AD" Type="varchar" MaxLength="50" />
+          <Property Name="MARKA" Type="varchar" MaxLength="50" />
+          <Property Name="FIYAT" Type="int" />
+          <Property Name="STOK" Type="int" />
+        </EntityType>
         <Association Name="FK_TBLNOTLAR_TBLDERSLER">
           <End Role="TBLDERSLER" Type="Self.TBLDERSLER" Multiplicity="0..1" />
           <End Role="TBLNOTLAR" Type="Self.TBLNOTLAR" Multiplicity="*" />
@@ -67,12 +77,14 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="Kulupler" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="NOTLISTESI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="DbSinavOgrenciModelStoreContainer">
           <EntitySet Name="TBLDERSLER" EntityType="Self.TBLDERSLER" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLKULUPLER" EntityType="Self.TBLKULUPLER" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLNOTLAR" EntityType="Self.TBLNOTLAR" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLOGRENCI" EntityType="Self.TBLOGRENCI" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLURUN" EntityType="Self.TBLURUN" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_TBLNOTLAR_TBLDERSLER" Association="Self.FK_TBLNOTLAR_TBLDERSLER">
             <End Role="TBLDERSLER" EntitySet="TBLDERSLER" />
             <End Role="TBLNOTLAR" EntitySet="TBLNOTLAR" />
@@ -159,6 +171,8 @@
           </AssociationSet>
           <EntitySet Name="TBLKULUPLER" EntityType="DbSinavOgrenciModel.TBLKULUPLER" />
           <FunctionImport Name="NOTLISTESI" ReturnType="Collection(DbSinavOgrenciModel.NOTLISTESI_Result)" />
+          <EntitySet Name="TBLURUN" EntityType="DbSinavOgrenciModel.TBLURUN" />
+          <FunctionImport Name="Kulupler" ReturnType="Collection(DbSinavOgrenciModel.Kulupler_Result)" />
         </EntityContainer>
         <EntityType Name="TBLKULUPLER">
           <Key>
@@ -176,6 +190,22 @@
           <Property Type="Int16" Name="SINAV3" Nullable="true" />
           <Property Type="Decimal" Name="ORTALAMA" Nullable="true" Precision="5" Scale="2" />
           <Property Type="Boolean" Name="DURUM" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="TBLURUN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MARKA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FIYAT" Type="Int32" />
+          <Property Name="STOK" Type="Int32" />
+        </EntityType>
+        <ComplexType Name="Kulupler_Result">
+          <Property Type="String" Name="AD" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="SOYAD" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="SEHIR" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="KULUPAD" Nullable="true" MaxLength="20" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -236,6 +266,27 @@
                 <ScalarProperty Name="SINAV3" ColumnName="SINAV3" />
                 <ScalarProperty Name="ORTALAMA" ColumnName="ORTALAMA" />
                 <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="TBLURUN">
+            <EntityTypeMapping TypeName="DbSinavOgrenciModel.TBLURUN">
+              <MappingFragment StoreEntitySet="TBLURUN">
+                <ScalarProperty Name="STOK" ColumnName="STOK" />
+                <ScalarProperty Name="FIYAT" ColumnName="FIYAT" />
+                <ScalarProperty Name="MARKA" ColumnName="MARKA" />
+                <ScalarProperty Name="AD" ColumnName="AD" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="Kulupler" FunctionName="DbSinavOgrenciModel.Store.Kulupler">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DbSinavOgrenciModel.Kulupler_Result">
+                <ScalarProperty Name="AD" ColumnName="AD" />
+                <ScalarProperty Name="SOYAD" ColumnName="SOYAD" />
+                <ScalarProperty Name="SEHIR" ColumnName="SEHIR" />
+                <ScalarProperty Name="KULUPAD" ColumnName="KULUPAD" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

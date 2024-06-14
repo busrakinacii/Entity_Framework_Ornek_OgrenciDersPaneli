@@ -31,10 +31,16 @@ namespace EntityOrnek.Model
         public virtual DbSet<TBLNOTLAR> TBLNOTLAR { get; set; }
         public virtual DbSet<TBLOGRENCI> TBLOGRENCI { get; set; }
         public virtual DbSet<TBLKULUPLER> TBLKULUPLER { get; set; }
+        public virtual DbSet<TBLURUN> TBLURUN { get; set; }
     
         public virtual ObjectResult<NOTLISTESI_Result> NOTLISTESI()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<NOTLISTESI_Result>("NOTLISTESI");
+        }
+    
+        public virtual ObjectResult<Kulupler_Result> Kulupler()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Kulupler_Result>("Kulupler");
         }
     }
 }
